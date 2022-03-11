@@ -1,0 +1,88 @@
+@import 'assets/sass/utilities/config';
+@import 'assets/sass/utilities/utilities';
+
+.Prescription {
+  @include e(main) {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 16px 16px 16px;
+  }
+
+  @include e(div) {
+    padding: 16px 0;
+    border-bottom: 1px solid $mischka;
+  }
+
+  @include e(main-paragraph) {
+    font-family: $font-family--primary-medium;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: $black;
+  }
+
+  @include e(description-text) {
+    font-family: $font-family--secondary;
+    font-size: $base__font-size;
+    line-height: 1.5;
+    color: $rolling-stone;
+    width: 80%;
+  }
+
+  @include e(content) {
+    padding: 32px 0;
+  }
+
+  @include e(dropdown) {
+    @include m(queries) {
+      width: 88%;
+      margin-left: 8px;
+      font-family: $font-family--secondary;
+      font-size: $base__font-size;
+      line-height: 1.5;
+      color: $rolling-stone;
+    }
+
+    a {
+      color: $caribbean-green;
+    }
+  }
+
+  @include e(welcome-img) {
+    @include m(mobile) {
+      width: 100%;
+    }
+    @include m(desktop) {
+      display: none;
+    }
+  }
+
+  @include for-size(small) {
+    @include e(dropdown) {
+      @include m(queries) {
+        width: 94%;
+      }
+    }
+    @include e(welcome-img) {
+      @include m(mobile) {
+        display: none;
+      }
+
+      @include m(desktop) {
+        display: block;
+      }
+    }
+  }
+
+  @include for-size(extra-large) {
+    @include e(main) {
+      padding: 44px 0 60px 0;
+    }
+
+    @include e(dropdown) {
+      @include m(queries) {
+        width: 588px;
+      }
+    }
+  }
+}

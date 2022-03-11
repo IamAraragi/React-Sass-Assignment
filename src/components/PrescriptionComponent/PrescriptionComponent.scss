@@ -1,0 +1,34 @@
+@import 'assets/sass/utilities/config';
+@import 'assets/sass/utilities/utilities';
+
+.Prescription {
+  @include e(title) {
+    p {
+      padding-left: 8px;
+      font-family: $font-family--secondary;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.44;
+      color: $havelock-blue;
+    }
+  }
+
+  @include e(container) {
+    margin: 5px 0 5px 11px;
+    padding: 6px 0 28px 20px;
+    border-left: 1px solid $mischka;
+  }
+
+  @include e(dropdown) {
+    padding: 16px;
+    border-radius: 4px;
+
+    @include m(solid) {
+      background-color: $pale-blue;
+    }
+
+    @include m(dotted) {
+      border: 1px dashed $mischka;
+    }
+  }
+}

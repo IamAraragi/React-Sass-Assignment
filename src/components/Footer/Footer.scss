@@ -1,0 +1,55 @@
+@import 'assets/sass/utilities/config';
+@import 'assets/sass/utilities/utilities';
+
+.Prescription {
+  @include e(footer) {
+    background-color: $pale-blue;
+    text-align: center;
+    padding-top: 16px;
+  }
+
+  @include e(footer-list) {
+    width: 278px;
+    margin: 0 auto;
+    padding: 24px 0 32px 0;
+  }
+
+  @include e(footer-items) {
+    font-family: $font-family--secondary;
+    font-size: 14px;
+    line-height: 1.57;
+    text-align: left;
+    color: $rolling-stone;
+
+    a {
+      color: $rolling-stone;
+    }
+
+    @include m(first) {
+      width: 30%;
+    }
+
+    @include m(second) {
+      width: 40%;
+    }
+
+    @include m(third) {
+      width: 30%;
+    }
+  }
+
+  @include for-size(extra-large) {
+    @include e(footer) {
+      padding: 32px 0;
+    }
+
+    @include e(buttons) {
+      float: left;
+    }
+
+    @include e(footer-list) {
+      float: right;
+      padding: 5px 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import 'assets/sass/utilities/config';
+@import 'assets/sass/utilities/utilities';
+
+.Prescription {
+  @include e(header) {
+    background-color: #00ccae;
+  }
+
+  @include e(header-container) {
+    padding-left: 16px;
+  }
+
+  @include e(logo) {
+    padding: 14px 0 14px 0;
+    margin: 0;
+  }
+
+  @include e(items) {
+    padding: 14px 14px 10px 14px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 4px solid #fed65a;
+
+      .Prescription__overlay {
+        display: block;
+      }
+    }
+  }
+
+  @include e(img) {
+    @include m(desktop) {
+      display: none;
+    }
+  }
+
+  @include e(paragraph) {
+    display: none;
+  }
+
+  @include e(overlay) {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    opacity: 0.2;
+  }
+
+  @include for-size(extra-large) {
+    @include e(header-container) {
+      max-width: 1112px;
+      margin: 0 auto;
+    }
+    @include e(items) {
+      padding: 14px 8px 10px 8px;
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      @include m(second) {
+        margin-left: 52px;
+      }
+    }
+
+    @include e(img) {
+      @include m(mobile) {
+        display: none;
+      }
+
+      @include m(desktop) {
+        display: block;
+        width: 57px;
+        height: 32px;
+      }
+    }
+
+    @include e(paragraph) {
+      display: block;
+      padding: 4px 0 0 4px;
+      font-family: $font-family--secondary;
+      font-size: $base__font-size;
+      font-weight: bold;
+      line-height: 1.5;
+      color: $white;
+    }
+  }
+}

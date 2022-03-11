@@ -1,0 +1,43 @@
+@import 'assets/sass/utilities/config';
+@import 'assets/sass/utilities/utilities';
+
+.Prescription {
+  @include e(button) {
+    @include m(main) {
+      padding: 7px 21px 7px 20px;
+      border-radius: 4px;
+      background-color: $white;
+      border: 1px solid $caribbean-green;
+      font-family: $font-family--primary;
+      font-size: 14px;
+      font-weight: 500;
+      color: $caribbean-green;
+
+      &:hover {
+        background-color: $caribbean-green;
+        color: $white;
+      }
+    }
+
+    @include m(footer) {
+      border: 1px solid $rolling-stone;
+      border-radius: 4px;
+      background-color: $pale-blue;
+      padding: 7px 19px;
+      font-family: $font-family--primary;
+      font-size: 14px;
+      font-weight: 500;
+      color: $rolling-stone;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $rolling-stone;
+        color: $pale-blue;
+      }
+    }
+
+    @include m(first) {
+      margin-right: 10px;
+    }
+  }
+}
