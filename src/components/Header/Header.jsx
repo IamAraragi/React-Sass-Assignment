@@ -4,6 +4,7 @@ import logo from '../../assets/images/logo.png';
 import logoDesktop from '../../assets/images/logo_desktop.png';
 import rxIcon from '../../assets/images/rx_icon.png';
 import userIcon from '../../assets/images/user_icon.png';
+import supportIcon from '../../assets/images/support_icon.png';
 
 import './Header.css';
 
@@ -25,9 +26,14 @@ function Header() {
             <p className="Prescription__paragraph left">Prescriptions</p>
             <div className="Prescription__overlay"></div>
           </div>
-          <div className="Prescription__items Prescription__items--second clearfix right">
+          <div className="Prescription__items Prescription__items--second clearfix left">
+            <img src={supportIcon} alt="support_icon" className="Prescription__icon left" />
+            <p className="Prescription__paragraph left">Support</p>
+            <div className="Prescription__overlay"></div>
+          </div>
+          <div className="Prescription__items Prescription__items--third clearfix right">
             <img src={userIcon} alt="user_icon" className="Prescription__icon left" />
-            <p className="Prescription__paragraph left">Jenny Bradely</p>
+            <p className="Prescription__paragraph left">Jenny Bradley</p>
             <div className="Prescription__overlay"></div>
           </div>
         </div>

@@ -1,0 +1,143 @@
+@import 'assets/sass/utilities/config';
+@import 'assets/sass/utilities/utilities';
+
+.Prescription {
+  @include e(tooltip) {
+    width: 100%;
+    padding: 0px 16px 0 16px;
+    margin-top: 4px;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      bottom: 100%; /* At the top of the tooltip */
+      margin-left: -5px;
+      border-width: 0 17px 11px;
+      border-style: solid;
+      border-color: transparent transparent $navy-blue transparent;
+    }
+
+    @include m(default) {
+      left: 16px;
+      top: 4px;
+
+      &::after {
+        border-width: 0;
+      }
+    }
+
+    @include m(prescription) {
+      left: 510px;
+      top: 4px;
+
+      &::after {
+        left: 56%;
+      }
+    }
+
+    @include m(support) {
+      left: 700px;
+      top: 4px;
+
+      &::after {
+        left: 72%;
+      }
+    }
+
+    @include m(profile) {
+      left: 824px;
+      top: 4px;
+
+      &::after {
+        left: 85%;
+      }
+    }
+  }
+
+  @include e(tooltip-title) {
+    background-color: $navy-blue;
+    padding: 10px 16px;
+    border: 1.5px solid $navy-blue;
+    border-radius: 4px 4px 0 0;
+
+    p {
+      font: normal bold 18px/1.44 $font-family--secondary;
+      color: $white;
+      padding-left: 8px;
+    }
+  }
+
+  @include e(icon-close) {
+    padding-top: 7px;
+  }
+
+  @include e(icon) {
+    @include m(default) {
+      padding-top: 2px;
+    }
+
+    @include m(presc) {
+      padding-top: 2px;
+    }
+
+    @include m(support) {
+      padding-top: 2px;
+    }
+  }
+
+  @include e(tooltip-content) {
+    padding: 20px 16px 16px 16px;
+    border: 1.5px solid $navy-blue;
+    border-radius: 0 0 4px 4px;
+    background-color: $pale-blue;
+  }
+
+  @include e(tooltip-description) {
+    text-align: center;
+  }
+
+  @include e(content-title) {
+    font: normal bold 16px/1.5 $font-family--secondary;
+    color: $navy-blue;
+  }
+
+  @include e(content-text) {
+    font: normal normal 16px/1.5 $font-family--secondary;
+    color: $rolling-stone;
+    padding: 6px 0 23px 0;
+  }
+
+  @include e(content-button) {
+    border: none;
+    background-color: $white;
+
+    p {
+      font: normal normal 16px/1.5 $font-family--secondary;
+      color: $caribbean-green;
+    }
+
+    img {
+      width: 15px;
+      padding-top: 6px;
+    }
+  }
+
+  @include for-size(extra-large) {
+    @include e(tooltip) {
+      width: 288px;
+      position: absolute;
+      padding: 0;
+      margin-top: 0;
+
+      &::after {
+        left: 50%;
+      }
+
+      @include m(profile) {
+        &::after {
+          left: 86%;
+        }
+      }
+    }
+  }
+}

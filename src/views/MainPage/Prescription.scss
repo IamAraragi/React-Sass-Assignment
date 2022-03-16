@@ -1,2 +1,9 @@
 @import 'assets/sass/utilities/config';
 @import 'assets/sass/utilities/utilities';
+
+.Prescription {
+  @include e(container-main) {
+    position: relative;
+    padding: 0;
+  }
+}

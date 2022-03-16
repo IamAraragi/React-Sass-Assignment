@@ -23,6 +23,10 @@
     padding: 16px;
     border-radius: 4px;
 
+    p {
+      font: normal bold 16px/1.5 $font-family--secondary;
+    }
+
     @include m(solid) {
       background-color: $pale-blue;
     }

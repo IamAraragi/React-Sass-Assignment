@@ -20,6 +20,12 @@
     position: relative;
     cursor: pointer;
 
+    @include m(second) {
+      img {
+        padding: 6px 4px 5px 4px;
+      }
+    }
+
     &:hover {
       border-bottom: 4px solid #fed65a;
 
@@ -64,6 +70,13 @@
       }
 
       @include m(second) {
+        margin-left: 52px;
+        p {
+          padding-left: 5px;
+        }
+      }
+
+      @include m(third) {
         margin-left: 52px;
       }
     }
