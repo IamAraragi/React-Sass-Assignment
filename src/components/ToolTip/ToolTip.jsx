@@ -13,7 +13,6 @@ export default function ToolTip(props) {
     icon,
     iconClass,
     prevButtonClass,
-    nextButtonClass,
     tooltipClass,
     handleNextButtonClick,
     handlePrevButtonClick,
@@ -26,10 +25,6 @@ export default function ToolTip(props) {
   const prevButtonClassName = prevButtonClass
     ? `Prescription__content-button left ${prevButtonClass} clearfix`
     : 'Prescription__content-button left clearfix';
-
-  const nextButtonClassName = nextButtonClass
-    ? `Prescription__content-button right ${nextButtonClass} clearfix`
-    : 'Prescription__content-button right clearfix';
 
   useEffect(() => {
     setTootltipClassName(newTooltipClassName);
@@ -61,7 +56,7 @@ export default function ToolTip(props) {
             <img src={prevIcon} alt="prev_icon" className="left" />
             <p className="right">Prev</p>
           </button>
-          <button className={nextButtonClassName} onClick={handleNextButtonClick}>
+          <button className="Prescription__content-button right clearfix" onClick={handleNextButtonClick}>
             <p className="left">Next</p>
             <img src={nextIcon} alt="next_icon" className="right" />
           </button>

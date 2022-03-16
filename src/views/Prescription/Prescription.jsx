@@ -46,13 +46,16 @@ function Prescription() {
       text: 'Click here to review and update your insurance information, shipping address, and payment information.',
       icon: profileIcon,
       iconClass: 'Prescription__icon--profile',
-      nextButtonClass: 'hidden',
       tooltipClass: 'Prescription__tooltip--profile',
     },
   };
 
   const handleNextButtonClick = () => {
     setIndex(index + 1);
+
+    if (index > 2) {
+      setIndex(0);
+    }
   };
 
   const handlePrevButtonClick = () => {
@@ -70,7 +73,6 @@ function Prescription() {
           icon={properties[states[index]].icon}
           iconClass={properties[states[index]].iconClass}
           prevButtonClass={properties[states[index]].prevButtonClass}
-          nextButtonClass={properties[states[index]].nextButtonClass}
           handleNextButtonClick={handleNextButtonClick}
           handlePrevButtonClick={handlePrevButtonClick}
           tooltipClass={properties[states[index]].tooltipClass}
