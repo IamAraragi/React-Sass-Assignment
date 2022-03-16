@@ -1,5 +1,5 @@
 import React from 'react';
-import Prescription from 'views/MainPage/Prescription';
+import Prescription from 'views/Prescription/Prescription';
 
 function App() {
   return (
